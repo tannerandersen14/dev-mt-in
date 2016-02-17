@@ -24,7 +24,11 @@ Inside of `homeCtrl.js` we will need to create a new controller on an `angular.m
 ```javascript
 angular.module('devMtIn')
 .controller('homeCtrl', function($scope) {
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/dayTwoSolution
 });
 ```
 Remember that we don't want to pass our `angular.module` an array here! When you pass in an array, you are making an entire new app rather than looking for your current one. Now all we need to do is include the script in a new script tag and add the `ng-controller` attribute to our `<body>` tag and pass it "homeCtrl".
@@ -110,7 +114,11 @@ To begin day two we need to start by creating a new file named `profileService.j
 ```javascript
 angular.module('devMtIn')
 .service('profileService', function() {
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/dayTwoSolution
 });
 ```
 An important distinction between services and controllers is that services do not take in the `$scope` parameter. Services will have no direct link to the view--their primary purpose is to do the heavy lifting for the rest of the application and pass data to controllers.
@@ -175,6 +183,7 @@ Now inside of `homeCtrl.js` instead of setting `$scope.myProfile` equal to a fri
 The last step for today will be adding functionality to our delete button. This will follow the same basic steps as adding to local storage.
 
 Add an `ng-click` to the 'Delete' button that calls a `deleteProfile` function inside of our controller. Our controller should call a `profileService.deleteProfile` function that simply removes the profile from local storage (`localStorage.removeItem('profile')`). After deleting the profile, we need to get our basic friends list back, so set `$scope.myProfile` equal to `profileService.checkForProfile()` again.
+<<<<<<< HEAD
 
 You've completed Angular day two! Now you know how to create services, access services inside of your controllers, handle clicks, and save to local storage.
 
@@ -404,3 +413,7 @@ $scope.checkForProfile = function() {
 Now whenever your code checks for your profile it will also update second level friends.
 
 You've completed your first week of Angular! Congratulations! Just today you created your own promise and implemented a recursive, closure scoped function!
+=======
+
+You've completed Angular day two! Now you know how to create services, access services inside of your controllers, handle clicks, and save to local storage.
+>>>>>>> origin/dayTwoSolution
